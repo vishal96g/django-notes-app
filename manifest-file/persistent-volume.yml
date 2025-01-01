@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: PersistentVolume
+
+metadata:
+ name: pv-notes-app
+ namespace: notes-app
+ labels:
+   app: notes1
+
+spec:
+ storageClassName: local-storage
+ capacity:
+  storage: 1Gi #Storage Size
+ accessModes: 
+ - ReadWriteOnce # How the volume can be accessed 
+ hostPath:
+  path: /home/ubuntu/volume  
+
+   
